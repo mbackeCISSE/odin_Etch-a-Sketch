@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: skyblue;
+    font-family: monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    border-bottom: 3px solid;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: skyblue;
+}
+header h1 {
+    margin-left: 10px;
+}
+.dimension {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 10px;
+}
+.text span {
+    font-size: 18px;
+}
+.dimension .text {
+    text-align: center;
+}
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.input #dimension {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 5px;
+}
+.input #valid {
+    background-color: rgba(0, 0, 255, 0.7);
+    border: none;
+    padding: 5px 4px;
+    color: white;
+    border-radius: 4px;
+}
+.input #valid:hover {
+    background-color: rgba(0, 0, 255);
+}
+.input #valid:active {
+    background-color: rgb(1, 1, 106);
+}
+.youngestContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex: 1;
+    width: 100%;
+}
+.rules {
+    width: 100%;
+    padding-left: 5px;
+}
+.rulesList {
+    margin-top: 16px;
+}
+.rulesList li {
+    /* list-style-position: inside; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 5px;
+}
+.rulesList li img {
+    display: block;
+    width: 20px;
+    height: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.tools {
+    width: 100%;
+}
+.tools button {
+    margin: auto;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid;
+    transition: all 0.5s ease;
+}
+.tools button:hover {
+    border: 1px solid white;
+}
+.tools button img {
+    width: 50px;
+}
+.tools button span {
+    display: none;
+    transition: all 0.5s ease;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    border-radius: 5px;
+    padding: 4px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.line {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.Square {
+    flex-shrink: 0;
+    flex-grow: 0;
+    /* flex-basis: 50px;
+    height: 50px; */
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square {
+    background-color: white;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    /* width: 50px;
+    height: 50px; */
+}
+

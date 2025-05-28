@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch a Sketch</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Etch-a-Sketch</h1>
+            <div class="dimension">
+                <div class="text">
+                   <span>please enter dimension</span><br/>
+                    (e.g: enter 16 for 16x16 grid of square)
+                </div>
+                <div class="input">
+                    <div><input type="number" id="dimension"></div>
+                    <div><input type="submit" value="valid" id="valid"></div>
+                </div>
+            </div>
+        </header>
+        <div class="youngestContainer">
+            <div class="rules">
+                <h2>Some hints:</h2>
+                <ul class="rulesList">
+                    <li>
+                        <img src="./images/index.png" alt="index">
+                        <span>default dimension is 16x16</span>
+                    </li>
+                    <li>
+                        <img src="./images/index.png" alt="index">
+                        <span>dimension between 1 and 100 <br>
+                            (1 <= dimension <= 100);</span>
+                    </li>
+                    <li>
+                        <img src="./images/index.png" alt="index">
+                        <span>each interaction darkens the square by 10%(10 interaction to have a fully black square);</span>
+                    </li>
+                    <li>
+                        <img src="./images/index.png" alt="index">
+                        <span>click square to erase it(put in white);</span>
+                    </li>
+                    <li>
+                        <img src="./images/index.png" alt="index">
+                        <span>double-click on a square to desable or enable  the pen.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container"></div>
+
+            <div class="tools">
+                <button>
+                    <img src="./images/eraser.png" alt="an eraser icon">
+                    <span>click to erase</span>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
