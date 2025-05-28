@@ -10,21 +10,21 @@ In this section, I put a couple of screenshoots takes when I a execute the drawe
 
 * The first to see when we execute the Etch a Sketch(default dimension is 16x16)
 
-![first]()
+![first](https://github.com/mbackeCISSE/odin_Etch-a-Sketch/blob/main/images/first.png?raw=true)
 
 * A space with 50x50 grid of square.
 
-![second]()
+![second](https://github.com/mbackeCISSE/odin_Etch-a-Sketch/blob/main/images/second.png?raw=true)
 
 * When we are trying to draw.
 
-![third]()
+![third](https://github.com/mbackeCISSE/odin_Etch-a-Sketch/blob/main/images/third.png?raw=true)
 
 * Possibility to erase all square(put in white) by click the eraser icon button at righ.
 
-![fourth]()
+![fourth](https://github.com/mbackeCISSE/odin_Etch-a-Sketch/blob/main/images/fourth.png?raw=true)
 
 * when dimension is 100x100.
 
-![fifth]()
+![fifth](https://github.com/mbackeCISSE/odin_Etch-a-Sketch/blob/main/images/fifth.png?raw=true)
 
