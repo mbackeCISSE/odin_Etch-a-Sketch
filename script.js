@@ -2,27 +2,20 @@ function random(limit) {
     return Math.floor(Math.random() * limit);
 }
 
-function calculGap(numberOfSquare, dimension) {
-    const totalSquareWide = dimension / numberOfSquare;
-    return totalSquareWide * 0.15;
-}
 let currentDimension = 16;
 let currentSpace = 800;
-let currentGap = calculGap(currentDimension, currentSpace);
-let currentSquareDimension = (currentSpace - (currentGap * currentDimension)) / currentDimension;
+let currentSquareDimension = currentSpace  / currentDimension;
 
 let isHovering = false;
 
-function createGridSquare(dimension, space, squareDimension, gap) {
+function createGridSquare(dimension, space, squareDimension) {
     const container = document.querySelector('div.container');
     container.style.width = `${space}px`;
     container.style.height = `${space}px`;
-    container.style.gap = `${gap}px`;
     
     for(let i = 0; i < dimension; i++) {
         let divTagLine = document.createElement('div');
         divTagLine.classList.add('line');
-        divTagLine.style.gap = `${gap}px`;
         for(let j = 0; j < dimension; j++) {
             let divTagSquare = document.createElement('div');
             let divTagSquareIn = document.createElement('div');
@@ -41,7 +34,7 @@ function createGridSquare(dimension, space, squareDimension, gap) {
     }
 }
 
-createGridSquare(currentDimension, currentSpace, currentSquareDimension, currentGap);
+createGridSquare(currentDimension, currentSpace, currentSquareDimension);
 
 let allSquare = document.querySelectorAll('div.square');
 
@@ -98,19 +91,21 @@ allSquare.forEach(square => {
 // relancement
 
 const buttonValid = document.querySelector('#valid');
-buttonValid.addEventListener('click', () => {
+buttonValid.addEventListener('click', (e) => {
     const newDimension = document.querySelector('#dimension').value;
+    document.querySelector('#dimension').value = '';
     if(newDimension > 0 && newDimension <= 100 && newDimension != currentDimension) {
+        const textDim = document.querySelector('.textDim');
+        textDim.textContent = `${newDimension} x ${newDimension}`;
         isDblClicked = false;
         const lines = document.querySelectorAll('div.line');
         lines.forEach(line => {
             line.remove();
         })
         currentDimension = newDimension;
-        currentGap = calculGap(currentDimension, currentSpace);
-        currentSquareDimension = (currentSpace - (currentGap * currentDimension)) / currentDimension;
+        currentSquareDimension = currentSpace / currentDimension;
 
-        createGridSquare(currentDimension, currentSpace, currentSquareDimension, currentGap);
+        createGridSquare(currentDimension, currentSpace, currentSquareDimension);
 
         allSquare = document.querySelectorAll('div.square');
         
